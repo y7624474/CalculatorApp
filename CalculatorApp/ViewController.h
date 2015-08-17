@@ -34,5 +34,6 @@ enum CalType{ADD=10,SUB,MULT,DIV};
 
 - (IBAction)clear:(id)sender;
 
+-(void)CalResult;
 @end
 

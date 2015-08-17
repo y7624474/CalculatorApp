@@ -15,8 +15,8 @@
 
 @implementation ViewController
 NSMutableString *strregister;
-int ifirst;
 int isecond;
+int iresult;
 int caltype;
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -86,29 +86,36 @@ int caltype;
 
 - (IBAction)add:(id)sender {
     caltype=ADD;
-    ifirst=[strregister intValue];
+    iresult=[self.ResultText.text intValue];
     [strregister setString:@""];
+    
 }
 
 - (IBAction)sub:(id)sender {
-    [strregister appendString:@"-"];
-    self.ResultText.text=strregister;
+    caltype=SUB;
+    iresult=[self.ResultText.text intValue];
+    [strregister setString:@""];
 }
 
-- (IBAction)result:(id)sender {
-    
+-(void)CalResult
+{
+    isecond=[strregister intValue];
     switch (caltype) {
         case ADD:
-            isecond=[strregister intValue];
-            self.ResultText.text=[NSString stringWithFormat:@"%d",ifirst+isecond];
+            iresult+=isecond;
             break;
         case SUB:
-            isecond=[strregister intValue];
-            self.ResultText.text=[NSString stringWithFormat:@"%d",ifirst-isecond];
+            iresult-=isecond;
             break;
         default:
             break;
     }
+    
+}
+
+- (IBAction)result:(id)sender {
+    [self CalResult];
+    self.ResultText.text=[NSString stringWithFormat:@"%d",iresult];
 }
 
 - (IBAction)clear:(id)sender {
