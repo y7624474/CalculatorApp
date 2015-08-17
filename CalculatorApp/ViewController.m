@@ -116,6 +116,7 @@ int caltype;
 - (IBAction)result:(id)sender {
     [self CalResult];
     self.ResultText.text=[NSString stringWithFormat:@"%d",iresult];
+    [strregister setString:@""];
 }
 
 - (IBAction)clear:(id)sender {
