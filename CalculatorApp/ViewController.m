@@ -8,16 +8,17 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
-
+@interface ViewController (){
+    NSMutableString *strregister;
+    int isecond;
+    int iresult;
+    int caltype;
+}
 
 @end
 
 @implementation ViewController
-NSMutableString *strregister;
-int isecond;
-int iresult;
-int caltype;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     strregister=[NSMutableString stringWithCapacity:10];
@@ -27,75 +28,34 @@ int caltype;
     // Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 
-
-- (IBAction)one:(id)sender {
-     [strregister appendString:@"1"];
+- (IBAction)countbtn:(id)sender {
+    UIButton* btn = sender;
+    NSString *name= [btn titleForState:UIControlStateNormal];
+//    NSLog(@"name=%@",name);
+    [strregister appendString:name];
     self.ResultText.text=strregister;
 }
 
-- (IBAction)two:(id)sender {
-    [strregister appendString:@"2"];
-    self.ResultText.text=strregister;
-}
 
-- (IBAction)three:(id)sender {
-    [strregister appendString:@"3"];
-    self.ResultText.text=strregister;
-}
 
-- (IBAction)four:(id)sender {
-    [strregister appendString:@"4"];
-    self.ResultText.text=strregister;
-}
-
-- (IBAction)five:(id)sender {
-    [strregister appendString:@"5"];
-    self.ResultText.text=strregister;
-}
-
-- (IBAction)six:(id)sender {
-    [strregister appendString:@"6"];
-    self.ResultText.text=strregister;
-}
-
-- (IBAction)seven:(id)sender {
-    [strregister appendString:@"7"];
-    self.ResultText.text=strregister;
-}
-
-- (IBAction)eight:(id)sender {
-    [strregister appendString:@"8"];
-    self.ResultText.text=strregister;
-}
-
-- (IBAction)nine:(id)sender {
-    [strregister appendString:@"9"];
-    self.ResultText.text=strregister;
-}
-
-- (IBAction)zero:(id)sender {
-    [strregister appendString:@"0"];
-    self.ResultText.text=strregister;
-}
-
-- (IBAction)add:(id)sender {
-    caltype=ADD;
+- (IBAction)cal:(id)sender {
+    UIButton* btn = sender;
+    NSString *name= [btn titleForState:UIControlStateNormal];
+    if([name isEqualToString:@"+"])
+        caltype=ADD;
+    if([name isEqualToString:@"-"])
+        caltype=SUB;
+    if([name isEqualToString:@"x"])
+        caltype=MULT;
+    if([name isEqualToString:@"/"])
+        caltype=DIV;
     iresult=[self.ResultText.text intValue];
     [strregister setString:@""];
     
 }
 
-- (IBAction)sub:(id)sender {
-    caltype=SUB;
-    iresult=[self.ResultText.text intValue];
-    [strregister setString:@""];
-}
 
 -(void)CalResult
 {
@@ -106,6 +66,12 @@ int caltype;
             break;
         case SUB:
             iresult-=isecond;
+            break;
+        case MULT:
+            iresult*=isecond;
+            break;
+        case DIV:
+            iresult/=isecond;
             break;
         default:
             break;
@@ -122,6 +88,12 @@ int caltype;
 - (IBAction)clear:(id)sender {
     [strregister setString:@""];
     self.ResultText.text=@"0";
+}
+
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 

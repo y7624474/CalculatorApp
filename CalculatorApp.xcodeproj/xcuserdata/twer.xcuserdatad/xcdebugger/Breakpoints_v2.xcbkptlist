@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CalculatorApp/ViewController.h"
-            timestampString = "461490783.552911"
+            timestampString = "461497918.243306"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40">
+            startingLineNumber = "34"
+            endingLineNumber = "34">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -24,11 +24,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CalculatorApp/ViewController.m"
-            timestampString = "461494182.535361"
+            timestampString = "461497918.243306"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "118"
-            endingLineNumber = "118"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
             landmarkName = "-result:"
             landmarkType = "5">
          </BreakpointContent>
@@ -40,12 +40,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CalculatorApp/ViewController.m"
-            timestampString = "461492738.15295"
+            timestampString = "461497918.243306"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
-            landmarkName = "-add:"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "-cal:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -56,12 +56,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CalculatorApp/ViewController.m"
-            timestampString = "461493992.777308"
+            timestampString = "461497918.243306"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
-            landmarkName = "-sub:"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "-cal:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -72,28 +72,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CalculatorApp/ViewController.m"
-            timestampString = "461492809.428303"
+            timestampString = "461497918.243306"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
-            landmarkName = "-add:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CalculatorApp/ViewController.m"
-            timestampString = "461493815.604504"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
-            landmarkName = "-add:"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "-cal:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
